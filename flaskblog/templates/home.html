@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+        {% for post in posts %}
+            <div style="cursor: pointer;" onclick="window.location='http://twitch.tv/{{post.username}}';">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.username}}</h5>
+                        <p class="card-text">${{post.offer}} for {{post.min_viewers}} viewers.</p>
+                        <a href="#" class="btn btn-primary">Go Now</a>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">  </div>
+                    <div class="panel-footer">  </div>
+                </div>
+            </div>
+            </br>
+        {% endfor %}
+{% endblock content %}
